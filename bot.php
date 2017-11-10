@@ -198,7 +198,8 @@ if (!is_null($events['events'])) {
 						$address = $object['result']['vicinity'];
 						$rating = $object['result']['rating'];
 						$urll = $object['result']['url'];
-						$addname .= "->>".$name."\n".$number."\n".$address."\n\n".$urll."\n\n\n";
+						$photo = $object['result']['photo_reference'];
+						$addname .= "->>".$name."\n".$number."\n".$address."\n\n".$photo."\n\n\n";
 					}            
 				    // Build message to reply back
 					$messages = [
