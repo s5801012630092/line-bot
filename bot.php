@@ -196,7 +196,8 @@ if (!is_null($events['events'])) {
 						$name = $object['result']['name']; 
 						$number = $object['result']['formatted_phone_number'];
 						$address = $object['result']['vicinity'];
-						$addname .= "->>".$name."\n".$number."\n".$address."\n\n";
+						$rating = $object['result']['rating'];
+						$addname .= "->>".$name."\n".$number."\n".$address."\n\n".$rating."\n\n\n";
 					}            
 				    // Build message to reply back
 					$messages = [
