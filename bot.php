@@ -198,7 +198,7 @@ if (!is_null($events['events'])) {
 						$address = $object['result']['vicinity'];
 						$rating = $object['result']['rating'];
 						$urll = $object['result']['url'];
-						$photo = $object['result']['icon'];
+						$photo = $object['result']['prediction']['description'];
 						$addname .= "->>".$name."\n".$number."\n".$address."\n\n".$icon."\n\n\n";
 					}            
 				    // Build message to reply back
