@@ -199,7 +199,7 @@ if (!is_null($events['events'])) {
 						$rating = $object['result']['rating'];
 						$urll = $object['result']['url'];
 						$photo = $object['result']['prediction']['description'];
-						$addname .= "->>".$name."\n".$number."\n".$address."\n\n".$icon."\n\n\n";
+						$addname .= "->>".$name."\n".$number."\n".$address."\n\n".$photo."\n\n\n";
 					}            
 				    // Build message to reply back
 					$messages = [
