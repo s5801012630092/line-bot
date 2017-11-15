@@ -291,7 +291,11 @@ if (!is_null($events['events'])) {
 					$data = [
 						'replyToken' => $replyToken,
 						'messages' => [$messages]
-				    	];	   
+				    	];
+					$data = [
+						'replyToken' => $replyToken,
+						'messages' => [$messageData]
+					];
 					break;
 				
 				case 'ร้านค้า': 
@@ -511,9 +515,11 @@ if (!is_null($events['events'])) {
 				'messages' => [$messages]
 			];
 		}
+		error_log(json_encode($data));
 		$post = json_encode($data);
 		$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 		$ch = curl_init($url);
+		curl_setopt($ch, CURLOPT_POST, true);
 		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
@@ -523,6 +529,7 @@ if (!is_null($events['events'])) {
 		$result = curl_exec($ch);
 		curl_close($ch);
 		url_close($ch);
+		error_log($result);
 		echo $result . "\r\n";		
 	}
 }
