@@ -462,7 +462,7 @@ if (!is_null($events['events'])) {
 									]
                     										],[
                         						'title' => "$name[1]",
-                        						'text' => "$address[0]",
+                        						'text' => "$address[1]",
                         						'actions' => [
                             							[
 											'type' => 'postback',
@@ -476,7 +476,7 @@ if (!is_null($events['events'])) {
 									]
 								],[
 									'title' => "$name[2]",
-									'text' => 'address',
+									'text' => "$address[2]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -490,7 +490,7 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[3]",
-									'text' => 'address',
+									'text' => "$address[3]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -504,7 +504,7 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[4]",
-									'text' => 'address',
+									'text' => "$address[4]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -514,20 +514,6 @@ if (!is_null($events['events'])) {
 											'type' => 'uri',
 											'label' => 'Google Map',
                                 							'uri' => "$urll[4]"
-										]
-									]
-                    						],[
-									'title' => "$name[5]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[5]"
 										]
 									]
                     						]
