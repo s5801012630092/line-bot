@@ -620,7 +620,7 @@ if (!is_null($events['events'])) {
 										]
 									]
                     						],[
-									'title' => "$name[5]",
+									'title' => "$name[7]",
 									'text' => 'address',
 									'actions' => [
 										[
@@ -630,7 +630,7 @@ if (!is_null($events['events'])) {
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[5]"
+                                							'uri' => "$urll[7]"
 										]
 									]
                     						]
