@@ -349,7 +349,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[0]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -363,7 +363,7 @@ if (!is_null($events['events'])) {
                         						'actions' => [
                             							[
 											'type' => 'postback',
-											'label' => "$number[1]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
                                 							'type' => 'uri',
@@ -419,7 +419,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[5]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -611,7 +611,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[0]",
+											'label' => "'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -625,7 +625,7 @@ if (!is_null($events['events'])) {
                         						'actions' => [
                             							[
 											'type' => 'postback',
-											'label' => "$number[1]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
                                 							'type' => 'uri',
@@ -639,7 +639,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[2]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -653,7 +653,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[3]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -742,7 +742,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[0]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -756,7 +756,7 @@ if (!is_null($events['events'])) {
                         						'actions' => [
                             							[
 											'type' => 'postback',
-											'label' => "$number[1]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
                                 							'type' => 'uri',
@@ -784,7 +784,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[3]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -887,7 +887,7 @@ if (!is_null($events['events'])) {
                         						'actions' => [
                             							[
 											'type' => 'postback',
-											'label' => "$number[1]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
                                 							'type' => 'uri',
@@ -915,7 +915,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[3]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -929,7 +929,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[4]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -943,7 +943,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[5]",
+											'label' => 'ไม่มีเบอร์ติดต่อ',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
