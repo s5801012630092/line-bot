@@ -719,7 +719,7 @@ if (!is_null($events['events'])) {
 										],[
                                 							'type' => 'uri',
                                 							'label' => 'Google Map',
-                                							'uri' => "$urll[1]"
+                                							'uri' => "$urll[2]"
 										]
 									]
 								],[
@@ -733,26 +733,12 @@ if (!is_null($events['events'])) {
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[2]"
-										]
-									]
-                    						],[
-									'title' => "$name[3]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
                                 							'uri' => "$urll[3]"
 										]
 									]
                     						],[
 									'title' => "$name[4]",
-									'text' => 'address',
+									'text' => "$address[4]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -765,7 +751,7 @@ if (!is_null($events['events'])) {
 										]
 									]
                     						],[
-									'title' => "$name[5]",
+									'title' => "$name[6]",
 									'text' => 'address',
 									'actions' => [
 										[
@@ -775,7 +761,7 @@ if (!is_null($events['events'])) {
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[5]"
+                                							'uri' => "$urll[6]"
 										]
 									]
                     						]
