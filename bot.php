@@ -696,11 +696,11 @@ if (!is_null($events['events'])) {
 							'columns' => [
 								[
 									'title' => "$name[0]",
-									'text' => 'address',
+									'text' => "$address[0]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[0]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
