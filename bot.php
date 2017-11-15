@@ -695,12 +695,12 @@ if (!is_null($events['events'])) {
 							'type' => 'carousel',
 							'columns' => [
 								[
-									'title' => "$name[0]",
-									'text' => "$address[0]",
+									'title' => "$name[1]",
+									'text' => "$address[1]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[0]",
+											'label' => "$number[1]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
