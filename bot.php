@@ -621,7 +621,7 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[8]",
-									'text' => "address[8]",
+									'text' => "$address[8]",
 									'actions' => [
 										[
 											'type' => 'postback',
