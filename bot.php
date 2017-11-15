@@ -377,7 +377,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[6]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -391,7 +391,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[10]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
