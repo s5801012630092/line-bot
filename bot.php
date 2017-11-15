@@ -705,12 +705,12 @@ if (!is_null($events['events'])) {
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[0]"
+                                							'uri' => "$urll[1]"
 										]
 									]
                     										],[
                         						'title' => "$name[2]",
-                        						'text' => "$address[2]",
+                        						'text' => 'address',
                         						'actions' => [
                             							[
 											'type' => 'postback',
@@ -724,11 +724,11 @@ if (!is_null($events['events'])) {
 									]
 								],[
 									'title' => "$name[3]",
-									'text' => "$address[3]",
+									'text' => 'address',
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[3]",
+											'label' => 'address',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
