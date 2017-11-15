@@ -335,7 +335,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "number[0]",
+											'label' => "$number[0]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -359,11 +359,11 @@ if (!is_null($events['events'])) {
 									]
 								],[
 									'title' => "$name[4]",
-									'text' => 'address',
+									'text' => "$address[4]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[4]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -373,11 +373,11 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[5]",
-									'text' => 'address',
+									'text' => "$address[5]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'number',
+											'label' => "number[5]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -387,11 +387,11 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[6]",
-									'text' => 'address',
+									'text' => "$address[6]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'number',
+											'label' => "$number[6]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
