@@ -386,8 +386,8 @@ if (!is_null($events['events'])) {
 										]
 									]
                     						],[
-									'title' => "$name[5]",
-									'text' => "$address[5]",
+									'title' => "$name[6]",
+									'text' => "$address[6]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -396,7 +396,7 @@ if (!is_null($events['events'])) {
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[5]"
+                                							'uri' => "$urll[6]"
 										]
 									]
                     						],[
