@@ -387,7 +387,7 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[3]",
-									'text' => "$address[3]",
+									'text' => 'address',
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -401,7 +401,7 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[4]",
-									'text' => "$address[4]",
+									'text' => 'address',
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -415,7 +415,7 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[5]",
-									'text' => "$address[5]",
+									'text' => 'address',
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -469,8 +469,98 @@ if (!is_null($events['events'])) {
 						$addname .= "->>".$name."\n".$number."\n".$address."\n\n";
 					}           
 					$messages = [
-						'type' => 'text',
-						'text' => "$addname"
+						'type' => 'template',
+						'altText' => 'carousel',
+						'template' => [
+							'type' => 'carousel',
+							'columns' => [
+								[
+									'title' => "$name[0]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[0]"
+										]
+									]
+                    										],[
+                        						'title' => "$name[1]",
+                        						'text' => 'address',
+                        						'actions' => [
+                            							[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+                                							'type' => 'uri',
+                                							'label' => 'Google Map',
+                                							'uri' => "$urll[1]"
+										]
+									]
+								],[
+									'title' => "$name[2]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[2]"
+										]
+									]
+                    						],[
+									'title' => "$name[3]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[3]"
+										]
+									]
+                    						],[
+									'title' => "$name[4]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[4]"
+										]
+									]
+                    						],[
+									'title' => "$name[5]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[5]"
+										]
+									]
+                    						]
+							]
+						]
 					];
 					// Make a POST Request to Messaging API to reply to sender
 					$url = 'https://api.line.me/v2/bot/message/reply';
@@ -510,8 +600,98 @@ if (!is_null($events['events'])) {
 						$addname .= "->>".$name."\n".$number."\n".$address."\n\n";
 					}           
 					$messages = [
-						'type' => 'text',
-						'text' => "$addname"
+						'type' => 'template',
+						'altText' => 'carousel',
+						'template' => [
+							'type' => 'carousel',
+							'columns' => [
+								[
+									'title' => "$name[0]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[0]"
+										]
+									]
+                    										],[
+                        						'title' => "$name[1]",
+                        						'text' => 'address',
+                        						'actions' => [
+                            							[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+                                							'type' => 'uri',
+                                							'label' => 'Google Map',
+                                							'uri' => "$urll[1]"
+										]
+									]
+								],[
+									'title' => "$name[2]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[2]"
+										]
+									]
+                    						],[
+									'title' => "$name[3]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[3]"
+										]
+									]
+                    						],[
+									'title' => "$name[4]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[4]"
+										]
+									]
+                    						],[
+									'title' => "$name[5]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[5]"
+										]
+									]
+                    						]
+							]
+						]
 					];
 					// Make a POST Request to Messaging API to reply to sender
 					$url = 'https://api.line.me/v2/bot/message/reply';
@@ -551,8 +731,98 @@ if (!is_null($events['events'])) {
 						$addname .= "->>".$name."\n".$number."\n".$address."\n\n";
 					}           
 					$messages = [
-						'type' => 'text',
-						'text' => "$addname"
+						'type' => 'template',
+						'altText' => 'carousel',
+						'template' => [
+							'type' => 'carousel',
+							'columns' => [
+								[
+									'title' => "$name[0]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[0]"
+										]
+									]
+                    										],[
+                        						'title' => "$name[1]",
+                        						'text' => 'address',
+                        						'actions' => [
+                            							[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+                                							'type' => 'uri',
+                                							'label' => 'Google Map',
+                                							'uri' => "$urll[1]"
+										]
+									]
+								],[
+									'title' => "$name[2]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[2]"
+										]
+									]
+                    						],[
+									'title' => "$name[3]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[3]"
+										]
+									]
+                    						],[
+									'title' => "$name[4]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[4]"
+										]
+									]
+                    						],[
+									'title' => "$name[5]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[5]"
+										]
+									]
+                    						]
+							]
+						]
 					];
 					// Make a POST Request to Messaging API to reply to sender
 					$url = 'https://api.line.me/v2/bot/message/reply';
@@ -592,8 +862,98 @@ if (!is_null($events['events'])) {
 						$addname .= "->>".$name."\n".$number."\n".$address."\n\n";
 					}           
 					$messages = [
-						'type' => 'text',
-						'text' => "$addname"
+												'type' => 'template',
+						'altText' => 'carousel',
+						'template' => [
+							'type' => 'carousel',
+							'columns' => [
+								[
+									'title' => "$name[0]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[0]"
+										]
+									]
+                    										],[
+                        						'title' => "$name[1]",
+                        						'text' => 'address',
+                        						'actions' => [
+                            							[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+                                							'type' => 'uri',
+                                							'label' => 'Google Map',
+                                							'uri' => "$urll[1]"
+										]
+									]
+								],[
+									'title' => "$name[2]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[2]"
+										]
+									]
+                    						],[
+									'title' => "$name[3]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[3]"
+										]
+									]
+                    						],[
+									'title' => "$name[4]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[4]"
+										]
+									]
+                    						],[
+									'title' => "$name[5]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[5]"
+										]
+									]
+                    						]
+							]
+						]
 
 					];
 					// Make a POST Request to Messaging API to reply to sender
