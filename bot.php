@@ -528,137 +528,6 @@ if (!is_null($events['events'])) {
 				    	];	   
 					break;
 					
-				case 'ATM': 
-					$url = "https://maps.googleapis.com/maps/api/place/radarsearch/json?language=th&location=13.825699,100.516154&radius=500&type=atm&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
-					$curl_handle = curl_init();
-					curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false);
-					curl_setopt( $curl_handle, CURLOPT_URL, $url );
-					curl_setopt( $curl_handle, CURLOPT_RETURNTRANSFER, true);
-					$text = curl_exec( $curl_handle );
-					curl_close( $curl_handle ); 
-					$obj = json_decode($text, TRUE);
-					$name = array();
-					$number = array();
-					$address = array();
-					$urll = array();
-					for ($x = 0; $x <= 5; $x++) {
-						$mes = $obj['results'][$x]['place_id']; 
-						$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$mes&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
-						$curl_handle = curl_init();
-						curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false);
-						curl_setopt( $curl_handle, CURLOPT_URL, $url );
-						curl_setopt( $curl_handle, CURLOPT_RETURNTRANSFER, true);
-						$text = curl_exec( $curl_handle );
-						curl_close( $curl_handle ); 
-						$object = json_decode($text, TRUE);
-						array_push($name, $object['result']['name']);
-						array_push($number, $object['result']['formatted_phone_number']);
-						array_push($address, $object['result']['vicinity']);
-						array_push($urll, $object['result']['url']);
-						$addname .= "->>".$name."\n".$number."\n".$address."\n\n";
-					}           
-					$messages = [
-						'type' => 'template',
-						'altText' => 'carousel',
-						'template' => [
-							'type' => 'carousel',
-							'columns' => [
-								[
-									'title' => "$name[0]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[0]"
-										]
-									]
-                    										],[
-                        						'title' => "$name[1]",
-                        						'text' => 'address',
-                        						'actions' => [
-                            							[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-                                							'type' => 'uri',
-                                							'label' => 'Google Map',
-                                							'uri' => "$urll[1]"
-										]
-									]
-								],[
-									'title' => "$name[2]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[2]"
-										]
-									]
-                    						],[
-									'title' => "$name[3]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[3]"
-										]
-									]
-                    						],[
-									'title' => "$name[4]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[4]"
-										]
-									]
-                    						],[
-									'title' => "$name[5]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[5]"
-										]
-									]
-                    						]
-							]
-						]
-					];
-					// Make a POST Request to Messaging API to reply to sender
-					$url = 'https://api.line.me/v2/bot/message/reply';
-					$data = [
-						'replyToken' => $replyToken,
-						'messages' => [$messages]
-				    	];	   
-					break;
-					
 				case 'ที่พัก': 
 					$url = "https://maps.googleapis.com/maps/api/place/radarsearch/json?language=th&location=13.825699,100.516154&radius=500&type=lodging&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
 					$curl_handle = curl_init();
@@ -672,7 +541,7 @@ if (!is_null($events['events'])) {
 					$number = array();
 					$address = array();
 					$urll = array();
-					for ($x = 0; $x <= 5; $x++) {
+					for ($x = 0; $x <= 10; $x++) {
 						$mes = $obj['results'][$x]['place_id']; 
 						$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$mes&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
 						$curl_handle = curl_init();
@@ -710,7 +579,7 @@ if (!is_null($events['events'])) {
 									]
                     										],[
                         						'title' => "$name[2]",
-                        						'text' => 'address',
+                        						'text' => "$address[2]",
                         						'actions' => [
                             							[
 											'type' => 'postback',
@@ -724,7 +593,7 @@ if (!is_null($events['events'])) {
 									]
 								],[
 									'title' => "$name[3]",
-									'text' => 'address',
+									'text' => "$address[3]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -776,138 +645,6 @@ if (!is_null($events['events'])) {
 				    	];	   
 					break;
 					
-				case 'ปั๊มน้ำมัน': 
-					$url = "https://maps.googleapis.com/maps/api/place/radarsearch/json?language=th&location=13.825699,100.516154&radius=2000&type=gas_station&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
-					$curl_handle = curl_init();
-					curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false);
-					curl_setopt( $curl_handle, CURLOPT_URL, $url );
-					curl_setopt( $curl_handle, CURLOPT_RETURNTRANSFER, true);
-					$text = curl_exec( $curl_handle );
-					curl_close( $curl_handle ); 
-					$obj = json_decode($text, TRUE);
-					$name = array();
-					$number = array();
-					$address = array();
-					$urll = array();
-					for ($x = 0; $x <= 5; $x++) {
-						$mes = $obj['results'][$x]['place_id']; 
-						$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$mes&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
-						$curl_handle = curl_init();
-						curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false);
-						curl_setopt( $curl_handle, CURLOPT_URL, $url );
-						curl_setopt( $curl_handle, CURLOPT_RETURNTRANSFER, true);
-						$text = curl_exec( $curl_handle );
-						curl_close( $curl_handle ); 
-						$object = json_decode($text, TRUE);
-						array_push($name, $object['result']['name']);
-						array_push($number, $object['result']['formatted_phone_number']);
-						array_push($address, $object['result']['vicinity']);
-						array_push($urll, $object['result']['url']);
-						$addname .= "->>".$name."\n".$number."\n".$address."\n\n";
-					}           
-					$messages = [
-												'type' => 'template',
-						'altText' => 'carousel',
-						'template' => [
-							'type' => 'carousel',
-							'columns' => [
-								[
-									'title' => "$name[0]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[0]"
-										]
-									]
-                    										],[
-                        						'title' => "$name[1]",
-                        						'text' => 'address',
-                        						'actions' => [
-                            							[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-                                							'type' => 'uri',
-                                							'label' => 'Google Map',
-                                							'uri' => "$urll[1]"
-										]
-									]
-								],[
-									'title' => "$name[2]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[2]"
-										]
-									]
-                    						],[
-									'title' => "$name[3]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[3]"
-										]
-									]
-                    						],[
-									'title' => "$name[4]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[4]"
-										]
-									]
-                    						],[
-									'title' => "$name[5]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[5]"
-										]
-									]
-                    						]
-							]
-						]
-
-					];
-					// Make a POST Request to Messaging API to reply to sender
-					$url = 'https://api.line.me/v2/bot/message/reply';
-					$data = [
-						'replyToken' => $replyToken,
-						'messages' => [$messages]
-				    	];	   
-					break;
-									
 				default :
 					$messages = [
 						'type' => 'text',
