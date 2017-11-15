@@ -621,11 +621,11 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[8]",
-									'text' => 'address',
+									'text' => "address[8]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[8]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
