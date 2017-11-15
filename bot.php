@@ -452,7 +452,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[0]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -466,7 +466,7 @@ if (!is_null($events['events'])) {
                         						'actions' => [
                             							[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[1]",
 											'data' => 'เบอร์โทร'
 										],[
                                 							'type' => 'uri',
@@ -480,7 +480,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[2]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -494,7 +494,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[3]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
