@@ -643,9 +643,7 @@ if (!is_null($events['events'])) {
 						'replyToken' => $replyToken,
 						'messages' => [$messages]
 				    	];	   
-					break;
-					
-				
+					break;				
 					
 				default :
 					$messages = [
