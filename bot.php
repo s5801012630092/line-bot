@@ -723,12 +723,12 @@ if (!is_null($events['events'])) {
 										]
 									]
 								],[
-									'title' => "$name[2]",
-									'text' => 'address',
+									'title' => "$name[3]",
+									'text' => "$address[3]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
+											'label' => "$number[3]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
