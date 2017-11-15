@@ -331,11 +331,11 @@ if (!is_null($events['events'])) {
 							'columns' => [
 								[
 									'title' => "$name[0]",
-									'text' => "$address[0]",
+									'text' => 'address',
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[0]",
+											'label' => 'number',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -345,11 +345,11 @@ if (!is_null($events['events'])) {
 									]
                     										],[
                         						'title' => "$name[1]",
-                        						'text' => "$address[1]",
+                        						'text' => 'address',
                         						'actions' => [
                             							[
 											'type' => 'postback',
-											'label' => "$number[1]",
+											'label' => 'number',
 											'data' => 'เบอร์โทร'
 										],[
                                 							'type' => 'uri',
@@ -359,7 +359,7 @@ if (!is_null($events['events'])) {
 									]
 								],[
 									'title' => "$name[2]",
-									'text' => "$address[2]",
+									'text' => 'address',
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -373,11 +373,11 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[3]",
-									'text' => "$address[3]",
+									'text' => 'address',
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[3]",
+											'label' => 'number',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -387,11 +387,11 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[4]",
-									'text' => "$address[4]",
+									'text' => 'address',
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[4]",
+											'label' => 'number',
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
