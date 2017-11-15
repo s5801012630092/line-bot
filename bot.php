@@ -321,7 +321,7 @@ if (!is_null($events['events'])) {
 					$number = array();
 					$address = array();
 					$urll = array();
-					for ($x = 0; $x <= 5; $x++) {
+					for ($x = 0; $x <= 10; $x++) {
 						$mes = $obj['results'][$x]['place_id']; 
 						$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$mes&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
 						$curl_handle = curl_init();
@@ -387,7 +387,7 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[3]",
-									'text' => 'address',
+									'text' => "$address[3]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -476,7 +476,7 @@ if (!is_null($events['events'])) {
 							'columns' => [
 								[
 									'title' => "$name[0]",
-									'text' => 'address',
+									'text' => "$address[0]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -490,7 +490,7 @@ if (!is_null($events['events'])) {
 									]
                     										],[
                         						'title' => "$name[1]",
-                        						'text' => 'address',
+                        						'text' => "$address[0]",
                         						'actions' => [
                             							[
 											'type' => 'postback',
