@@ -190,7 +190,7 @@ if (!is_null($events['events'])) {
 					$number = array();
 					$address = array();
 					$urll = array();
-					for ($x = 0; $x <= 5; $x++) {
+					for ($x = 0; $x < 5; $x++) {
 						$mes = $obj['results'][$x]['place_id']; 
 						$url = "https://maps.googleapis.com/maps/api/place/details/json?placeid=$mes&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
 						$curl_handle = curl_init();
@@ -280,20 +280,6 @@ if (!is_null($events['events'])) {
 											'type' => 'uri',
 											'label' => 'Google Map',
                                 							'uri' => "$urll[4]"
-										]
-									]
-                    						],[
-									'title' => "$name[5]",
-									'text' => "$address[5]",
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'ไม่มีเบอร์ติดต่อ',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[5]"
 										]
 									]
                     						]
@@ -400,8 +386,8 @@ if (!is_null($events['events'])) {
 										]
 									]
                     						],[
-									'title' => "$name[4]",
-									'text' => 'address',
+									'title' => "$name[7]",
+									'text' => "$address[7]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -410,21 +396,7 @@ if (!is_null($events['events'])) {
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[4]"
-										]
-									]
-                    						],[
-									'title' => "$name[5]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => "$number[5]",
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[5]"
+                                							'uri' => "$urll[7]"
 										]
 									]
                     						]
