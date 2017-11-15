@@ -331,11 +331,11 @@ if (!is_null($events['events'])) {
 							'columns' => [
 								[
 									'title' => "$name[0]",
-									'text' => 'address',
+									'text' => "$address[0]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'number',
+											'label' => "number[0]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -344,21 +344,21 @@ if (!is_null($events['events'])) {
 										]
 									]
                     										],[
-                        						'title' => "$name[1]",
-                        						'text' => 'address',
+                        						'title' => "$name[2]",
+                        						'text' => "$address[2]",
                         						'actions' => [
                             							[
 											'type' => 'postback',
-											'label' => 'number',
+											'label' => 'ไม่มีเบอร์โทร',
 											'data' => 'เบอร์โทร'
 										],[
                                 							'type' => 'uri',
                                 							'label' => 'Google Map',
-                                							'uri' => "$urll[1]"
+                                							'uri' => "$urll[2]"
 										]
 									]
 								],[
-									'title' => "$name[2]",
+									'title' => "$name[4]",
 									'text' => 'address',
 									'actions' => [
 										[
@@ -368,35 +368,35 @@ if (!is_null($events['events'])) {
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[2]"
-										]
-									]
-                    						],[
-									'title' => "$name[3]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'number',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
-                                							'uri' => "$urll[3]"
-										]
-									]
-                    						],[
-									'title' => "$name[4]",
-									'text' => 'address',
-									'actions' => [
-										[
-											'type' => 'postback',
-											'label' => 'number',
-											'data' => 'เบอร์โทร'
-										],[
-											'type' => 'uri',
-											'label' => 'Google Map',
                                 							'uri' => "$urll[4]"
+										]
+									]
+                    						],[
+									'title' => "$name[5]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'number',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[5]"
+										]
+									]
+                    						],[
+									'title' => "$name[6]",
+									'text' => 'address',
+									'actions' => [
+										[
+											'type' => 'postback',
+											'label' => 'number',
+											'data' => 'เบอร์โทร'
+										],[
+											'type' => 'uri',
+											'label' => 'Google Map',
+                                							'uri' => "$urll[6]"
 										]
 									]
                     						]
