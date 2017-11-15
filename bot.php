@@ -295,7 +295,7 @@ if (!is_null($events['events'])) {
 					break;
 				
 				case 'ร้านค้า': 
-					$url = "https://maps.googleapis.com/maps/api/place/radarsearch/json?language=th&location=13.825699,100.516154&radius=500&type=store&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
+					$url = "https://maps.googleapis.com/maps/api/place/radarsearch/json?language=th&location=13.825699,100.516154&radius=500&type=grocery_or_supermarket&key=AIzaSyBEA0UcZj9m-fYvwGTx0aoITGJxyWLdGm4";
 					$curl_handle = curl_init();
 					curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false);
 					curl_setopt( $curl_handle, CURLOPT_URL, $url );
@@ -372,31 +372,31 @@ if (!is_null($events['events'])) {
 										]
 									]
                     						],[
-									'title' => "$name[6]",
-									'text' => "$address[6]",
+									'title' => "$name[3]",
+									'text' => "$address[3]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[6]",
+											'label' => "$number[3]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[6]"
+                                							'uri' => "$urll[3]"
 										]
 									]
                     						],[
-									'title' => "$name[10]",
-									'text' => "$address[10]",
+									'title' => "$name[4]",
+									'text' => "$address[4]",
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => "$number[10]",
+											'label' => "$number[4]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[10]"
+                                							'uri' => "$urll[4]"
 										]
 									]
                     						]
