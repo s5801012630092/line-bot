@@ -597,7 +597,7 @@ if (!is_null($events['events'])) {
 									'actions' => [
 										[
 											'type' => 'postback',
-											'label' => 'address',
+											'label' => "$number[3]",
 											'data' => 'เบอร์โทร'
 										],[
 											'type' => 'uri',
@@ -607,7 +607,7 @@ if (!is_null($events['events'])) {
 									]
                     						],[
 									'title' => "$name[4]",
-									'text' => 'address',
+									'text' => "$address[4]",
 									'actions' => [
 										[
 											'type' => 'postback',
@@ -620,7 +620,7 @@ if (!is_null($events['events'])) {
 										]
 									]
                     						],[
-									'title' => "$name[6]",
+									'title' => "$name[5]",
 									'text' => 'address',
 									'actions' => [
 										[
@@ -630,7 +630,7 @@ if (!is_null($events['events'])) {
 										],[
 											'type' => 'uri',
 											'label' => 'Google Map',
-                                							'uri' => "$urll[6]"
+                                							'uri' => "$urll[5]"
 										]
 									]
                     						]
